@@ -1,0 +1,77 @@
+---
+title: "QMM_11"
+author: "sai prasad desineni/811191807"
+date: '2022-11-21'
+output: pdf_document
+---
+
+```{r}
+#loading libraries 
+library(lpSolveAPI)
+
+#loading the dataset
+ipmodel = read.lp("C:/Users/desineni/Downloads/AP.lp")
+ipmodel
+
+```
+```{r}
+solve(ipmodel)
+#the value obtained "0" shows that he model exists
+
+```
+
+
+```{r}
+get.objective(ipmodel)
+### therefore the total wages while ensuring that there are sufficient number of workers available
+### each day is 25675$
+```
+
+
+```{r}
+get.variables(ipmodel)
+```
+x1 = Employees on shit 1 = 2
+
+
+x2 = Employees on shit 2 = 4
+
+
+x3 = Employees on shit 3 = 5
+
+
+x4 = Employees on shit 4 = 0
+
+
+x5 = Employees on shit 5 = 8
+
+
+x6 = Employees on shit 6 = 1
+
+
+x7 = Employees on shit 7 = 13
+
+
+the number of workers available each day are 
+
+
+sunday = x2 + x3 + x4 + x5 + x6 = 18
+\newline
+monday = x3 + x4 + x5 + x6 + x7 = 27
+\newline
+tuesday = x4 + x5 + x6 + x7 + x1 = 24
+\newline
+wednesday = x5 + x6 + x7 + x1 + x2 = 26
+\newline
+Wednesday: x5 + x6 + x7 + x1 + x2 = 28
+\newline
+Thursday: x6 + x7 + x1 + x2 + x3 = 25
+\newline
+Friday: x7 + x1 + x2 + x3 + x4 = 24
+\newline
+Saturday: x1 + x2 + x3 + x4 + x5 = 19
+\newline
+```{r}
+```
+
+
